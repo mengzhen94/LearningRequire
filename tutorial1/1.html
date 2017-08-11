@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <title>Setting up RequireJS</title>
+  </head>
+  <body>
+
+    <!--
+    script require is a async call so when the require.js loads,
+    it asynchromous calls the config file it means it doesn't restrict your JS code
+
+    -->
+    <p>
+      <button id="clickMe">AMD: Asynchronous Module Definition</button>
+    </p>
+    <script data-main="js/config" src="require.js"></script>
+    <script>
+
+      require(['config'], function() {
+        /*
+        Require will load the configuration file which is js/config.js
+        and once it's ready, once it has been loaded in the browse, all of this code
+        will run here
+        require is like just script src="require.js"><script
+
+        baseUrl is js
+        */
+        require(['customScripts/jqueryFile'], function() {
+
+        })
+      })
+    </script>
+  </body>
+</html>
