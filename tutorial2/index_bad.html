@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <title>Bad Index</title>
+  </head>
+  <body>
+    <h1>Hello <span id="foo"></span>
+
+    <script src="asserts/js/lib/jquery.min.js"></script>
+    <script src="asserts/js/lib/bootstrap.min.js"></script>
+    <script src="asserts/js/lib/angular.min.js"></script>
+    <script>
+      $(function(){
+        $('#foo').html('[changed by jquery]')
+      })
+    </script>
+  </body>
+</html>

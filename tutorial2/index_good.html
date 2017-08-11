@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <title>Good Index</title>
+  </head>
+  <body>
+    <h1>Hello <span id="foo"></span>
+
+    <script data-main="asserts/js/common" src="asserts/js/lib/require.js"></script>
+    <script>
+      require(['common'], function() {
+        // Load up this page script, once the 'common' script has loaded
+        require(['page/home'], function() {
+
+        })
+      })
+    </script>
+  </body>
+</html>
